@@ -1,0 +1,12 @@
+// my_code.aur
+
+let name: string = "Will"
+let times: int = 3
+
+func repeat_greet(who: string, n: int) -> void {
+    for i in range(0, n) {
+        print("Hello, {who} - number", i + 1)
+    }
+}
+
+repeat_greet(name, times)

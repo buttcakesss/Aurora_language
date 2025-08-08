@@ -1,0 +1,182 @@
+
+Aurora Programming Language - Full Documentation
+================================================
+
+Aurora is a statically typed, C++-like programming language with Python-like readability. 
+It supports variables, constants, functions, conditionals, loops, and built-in functions, 
+along with type inference and optional type annotations.
+
+-----------------------------------------
+1. Lexical Structure
+-----------------------------------------
+
+Aurora code consists of tokens separated by spaces, newlines, or semicolons.
+
+Keywords:
+    let, const, func, return, if, else, while, for, in, range, true, false
+
+Type Keywords:
+    int, float, bool, string, void
+
+Operators:
+    +  -  *  /  %
+    ==  !=  <  <=  >  >=
+    =  (assignment)
+
+Symbols:
+    ( )  { }  [ ]  :  ,  ;  ->
+
+Identifiers:
+    Variable or function names must start with a letter or underscore, followed by letters, digits, or underscores.
+
+Literals:
+    Numbers: 42, 3.14
+    Strings: "Hello"
+    Booleans: true, false
+
+Comments:
+    // This is a comment
+
+-----------------------------------------
+2. Variables and Constants
+-----------------------------------------
+
+Syntax:
+    let <name> = <expression>;
+    let <name>: <type> = <expression>;
+    const <name> = <expression>;
+
+Examples:
+    let x = 10;
+    let name: string = "Aurora";
+    const PI: float = 3.14159;
+
+Notes:
+    - Constants (const) cannot be reassigned.
+    - Type annotations are optional; the type will be inferred from the initial value.
+
+-----------------------------------------
+3. Assignment
+-----------------------------------------
+
+Variables can be reassigned using '='.
+
+Example:
+    let count = 0;
+    count = count + 1;
+
+-----------------------------------------
+4. Functions
+-----------------------------------------
+
+Syntax:
+    func <name>(<param>: <type>, ...) -> <return_type> {
+        <statements>
+    }
+
+Example:
+    func add(a: int, b: int) -> int {
+        return a + b;
+    }
+
+    let sum = add(5, 7);
+    print(sum);
+
+Notes:
+    - Functions must declare parameter types and return types.
+    - 'return' can be used to return a value from a function.
+
+-----------------------------------------
+5. Control Flow
+-----------------------------------------
+
+If Statement:
+    if <condition> {
+        <statements>
+    } else {
+        <statements>
+    }
+
+While Loop:
+    while <condition> {
+        <statements>
+    }
+
+For Loop (range-based):
+    for i in range(start, end) {
+        <statements>
+    }
+
+Example:
+    for i in range(0, 5) {
+        print(i);
+    }
+
+-----------------------------------------
+6. Expressions
+-----------------------------------------
+
+Expressions can include literals, variables, function calls, and operators.
+
+Examples:
+    2 + 3 * 4
+    (a - b) / 2
+    name + " world"
+
+-----------------------------------------
+7. Built-in Functions
+-----------------------------------------
+
+print(...):
+    Prints its arguments to standard output.
+
+open(filename: string, mode: string = "r"):
+    Opens a file and returns a file object (Python-like behavior).
+
+len(obj):
+    Returns the length of a string, list, or other countable object.
+
+-----------------------------------------
+8. String Interpolation
+-----------------------------------------
+
+Strings can include variable values inside `{}`.
+
+Example:
+    let name = "Will";
+    print("Hello, {name}");
+
+-----------------------------------------
+9. Types
+-----------------------------------------
+
+Primitive Types:
+    int     - integers
+    float   - floating point numbers
+    bool    - true/false
+    string  - text
+    void    - no return value
+
+Type Checking:
+    Aurora enforces type checking for variables and function parameters.
+
+-----------------------------------------
+10. Example Program
+-----------------------------------------
+
+let name: string = "Will";
+let total = 0;
+
+for i in range(0, 5) {
+    total = total + i;
+}
+
+func greet(who: string) -> void {
+    print("Hello, {who}");
+}
+
+greet(name);
+print("Sum =", total);
+
+-----------------------------------------
+End of Documentation
