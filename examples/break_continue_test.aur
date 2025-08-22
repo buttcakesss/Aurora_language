@@ -1,0 +1,63 @@
+fn test_break() -> i64 {
+    let sum: i64 = 0;
+    let i: i64 = 0;
+    
+    // Test break in while loop
+    while (i < 100) {
+        if (i == 10) {
+            break;
+        }
+        sum = sum + i;
+        i = i + 1;
+    }
+    
+    return sum; // Should be 0+1+2+...+9 = 45
+}
+
+fn test_continue() -> i64 {
+    let sum: i64 = 0;
+    let i: i64 = 0;
+    
+    // Test continue in while loop - skip odd numbers
+    while (i < 10) {
+        i = i + 1;
+        if (i % 2 == 1) {
+            continue;
+        }
+        sum = sum + i;
+    }
+    
+    return sum; // Should be 2+4+6+8+10 = 30
+}
+
+fn test_nested_loops() -> i64 {
+    let count: i64 = 0;
+    let i: i64 = 0;
+    
+    while (i < 5) {
+        let j: i64 = 0;
+        while (j < 5) {
+            if (j == 3) {
+                break; // Break inner loop only
+            }
+            count = count + 1;
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+    
+    return count; // Should be 5*3 = 15
+}
+
+fn main() -> i64 {
+    let test1: i64 = test_break();
+    print_i64(test1); // Should print 45
+    
+    let test2: i64 = test_continue();
+    print_i64(test2); // Should print 30
+    
+    let test3: i64 = test_nested_loops();
+    print_i64(test3); // Should print 15
+    
+    return 0;
+}

@@ -1,0 +1,33 @@
+// Test void functions
+
+fn print_message() -> void {
+  print_i64(42);
+  print_i64(100);
+  return;
+}
+
+fn print_and_modify(x: i64) -> void {
+  print_i64(x);
+  print_i64(x + 10);
+}
+
+fn early_return(x: i64) -> void {
+  if (x < 5) {
+    print_i64(999);
+    return;
+  }
+  print_i64(x);
+}
+
+fn main() -> i64 {
+  print_message();
+  print_and_modify(7);
+  early_return(3);
+  early_return(10);
+  
+  // Test free (which returns void)
+  let p: ptr<i64> = malloc(8);
+  free(p);
+  
+  return 0;
+}

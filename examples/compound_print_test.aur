@@ -1,0 +1,15 @@
+fn main() -> i64 {
+  let x: i64 = 100;
+  print_i64(x);
+  x += 20;   
+  print_i64(x);
+  x /= 3;    
+  print_i64(x);
+  x -= 5;    
+  print_i64(x);
+  x %= 10;   
+  print_i64(x);
+  x *= 3;    
+  print_i64(x);
+  return x;
+}

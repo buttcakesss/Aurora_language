@@ -1,0 +1,29 @@
+fn test_immediate_break() -> i64 {
+    let count: i64 = 0;
+    while (true) {
+        break;
+        count = count + 1; // Should never execute
+    }
+    return count; // Should be 0
+}
+
+fn test_immediate_continue() -> i64 {
+    let count: i64 = 0;
+    let i: i64 = 0;
+    while (i < 3) {
+        i = i + 1;
+        continue;
+        count = count + 1; // Should never execute
+    }
+    return count; // Should be 0
+}
+
+fn main() -> i64 {
+    let test1: i64 = test_immediate_break();
+    print_i64(test1); // Should print 0
+    
+    let test2: i64 = test_immediate_continue();
+    print_i64(test2); // Should print 0
+    
+    return 0;
+}

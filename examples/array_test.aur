@@ -1,0 +1,25 @@
+// Array test examples
+
+fn main() -> i64 {
+  // Array declaration with type - using i64 for compatibility with print_i64
+  let arr: i64[5] = [1, 2, 3, 4, 5];
+  
+  // Array indexing  
+  let x = arr[2];  // should be 3
+  print_i64(x);
+  
+  // Array modification
+  arr[1] = 10;
+  print_i64(arr[1]);  // should print 10
+  
+  // Array literal inference
+  let nums = [10, 20, 30, 40];
+  print_i64(nums[0]);  // should print 10
+  print_i64(nums[3]);  // should print 40
+  
+  // Compute sum
+  let sum = nums[0] + nums[1] + nums[2] + nums[3];
+  print_i64(sum);  // should print 100
+  
+  return 0;
+}

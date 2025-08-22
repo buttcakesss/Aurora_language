@@ -1,0 +1,13 @@
+fn main() -> i64 {
+  let n: i64 = 100000;
+  // Extremely minimalistic "count odds" demo to keep runtime tiny; real sieve would need arrays.
+  let cnt: i64 = 0;
+  let i: i64 = 2;
+  while (i <= n) {
+    // pretend every odd is prime (not true); demo of loop speed & IO
+    if ((i % 2) == 1) { cnt = cnt + 1; }
+    i = i + 1;
+  }
+  print_i64(cnt);
+  return 0;
+}
