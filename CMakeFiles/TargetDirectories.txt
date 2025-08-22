@@ -1,0 +1,8 @@
+/mnt/c/Cloud/Aurora/build/CMakeFiles/intrinsics_gen.dir
+/mnt/c/Cloud/Aurora/build/CMakeFiles/omp_gen.dir
+/mnt/c/Cloud/Aurora/build/CMakeFiles/acc_gen.dir
+/mnt/c/Cloud/Aurora/build/CMakeFiles/RISCVTargetParserTableGen.dir
+/mnt/c/Cloud/Aurora/build/CMakeFiles/aurorac.dir
+/mnt/c/Cloud/Aurora/build/CMakeFiles/aurora_runtime.dir
+/mnt/c/Cloud/Aurora/build/CMakeFiles/edit_cache.dir
+/mnt/c/Cloud/Aurora/build/CMakeFiles/rebuild_cache.dir
